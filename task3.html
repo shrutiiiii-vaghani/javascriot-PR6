@@ -1,0 +1,19 @@
+<script type="text/javascript">
+
+    var n = parseInt(prompt("Enter a number:"));
+
+    var i = 1;
+
+    class table{
+        multi = () => {
+            do{
+                document.write(" "+n+ "*"+""+i+"="+n*i+"<br>");
+                i++;
+            }
+            while(i<=10);
+        }
+    }
+    let obj= new table;
+    obj.multi();
+
+</script>

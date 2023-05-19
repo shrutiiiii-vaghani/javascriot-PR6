@@ -1,0 +1,61 @@
+<table border="2" cellpadding="10">
+
+    <tr>
+        <td>name</td>
+        <td>email</td>
+        <td>phone</td>
+    </tr>
+    <tbody id="record">
+
+    </tbody>
+
+</table>
+
+<script type="text/javascript">
+
+    let tbl= "";
+    class demo{
+        constructor(name,email,phone){
+            this.data = [
+                {
+                    name : "jay",
+                    email : "jay@gmail.com",
+                    phone : "12345",
+                },
+                {
+                    name : "ajay",
+                    email : "ajay@gmail.com",
+                    phone : "12345",
+                },
+                {
+                    name : "vijay",
+                    email : "vijay@gmail.com",
+                    phone : "12345",
+                },
+                {
+                    name : "ashish",
+                    email : "ashish@gmail.com",
+                    phone : "12345",
+                },
+            ];
+        }
+
+    detail = () =>{
+        this.data.map((v)=>{
+           tbl += 
+            `
+             <tr>
+              <td>${v.name}</td>  
+              <td>${v.email}</td>    
+              <td>${v.phone}</td>    
+            </tr>
+            `
+        });
+        document.getElementById('record').innerHTML=tbl;
+    }
+}
+
+  let obj1 = new demo();
+  obj1.detail();
+
+</script>
